@@ -1,0 +1,9 @@
+
+<%= @letters %>
+
+<form action="/games" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="guess" placeholder="your guess here">
+  <input type="hidden" name="grid" value="<%= @letters.join %>">
+  <input type="submit">
+</form>
